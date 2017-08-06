@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>확대/축소</title>
+	<script type="text/javascript">
+		function big(f) {
+			f.width=f.width*2;
+		}
+		function small(f) {
+			f.width=f.width/2;		
+		}
+	</script>
+</head>
+<body>
+	<img src="./resource/flower.gif"  onmouseover="big(this)"  onmouseout="small(this)">
+</body>
+</html>

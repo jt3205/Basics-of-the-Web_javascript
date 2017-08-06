@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function checkAll(){
+			document.getElementById('ajax').checked=true;
+			document.getElementById('java').checked=true;
+			document.getElementById('js').checked=true;
+			document.getElementById('oracle').checked=true;
+		}
+		function uncheck(){
+			document.getElementById('ajax').checked=false;
+			document.getElementById('java').checked=false;
+			document.getElementById('js').checked=false;
+			document.getElementById('oracle').checked=false;
+		}
+		function msg(){
+			var msg="";
+			if(document.getElementById('ajax').checked){
+				msg+="ajax\n";
+			}
+			if(document.getElementById('java').checked){
+				msg+="java\n";
+			}
+			if(document.getElementById('js').checked){
+				msg+="js\n";
+			}
+			if(document.getElementById('oracle').checked){
+				msg+="oracle\n";
+			}
+			alert(msg);
+		}
+	</script>
+</head>
+<body>
+	<input type="checkbox" name="ajax" value="ajax" id="ajax">AJAX
+	<input type="checkbox" name="java" value="java" id="java">java
+	<input type="checkbox" name="js" value="js" id="js">javascript
+	<input type="checkbox" name="oracle" value="oracle" id="oracle">oracle
+	<input type="button" value="모두선택" onclick="checkAll()">
+	<input type="button" value="모두해제" onclick="uncheck()">
+	<input type="button" value="클릭" onclick="msg()">	
+</body>
+</html>

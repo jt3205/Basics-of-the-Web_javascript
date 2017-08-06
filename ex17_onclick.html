@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function choice() {
+			str="";
+			len=document.forms[0].elements.length;
+			//alert(len);                     // 5개 
+
+			for(n=0; n<len; n++)
+			{
+				if(document.forms[0].elements[n].checked)
+				{
+					str += "\n" +document.forms[0].elements[n].value;
+				}
+			}
+			alert("[주문 메뉴]\n"+ str);
+		}
+
+
+
+		/*function choice() {
+			str="";
+			if(document.getElementById('ch1').checked)
+				str += "  " + document.getElementById('ch1').value;
+			if(document.getElementById('ch2').checked)
+				str += "  " + document.getElementById('ch2').value;
+			if(document.getElementById('ch3').checked)
+				str += "  " + document.getElementById('ch3').value;
+			if(document.getElementById('ch4').checked)
+				str += "  " + document.getElementById('ch4').value;
+
+			alert("[주문 메뉴]\n" + str);
+		}*/
+	</script>
+</head>
+<body>
+<form name="frm1">
+	<input type="checkbox" id="ch1" checked value="라면">라면
+	<input type="checkbox" id="ch2" value="떡볶기">떡볶기
+	<input type="checkbox" id="ch3" value="순대">순대
+	<input type="checkbox" id="ch4" value="김밥">김밥
+	<input type="button" value="선택하시오" onclick="choice()">
+</form>	
+</body>
+</html>

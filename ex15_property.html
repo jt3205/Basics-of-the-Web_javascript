@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>* this키워드를 이용해서 제목 색상 바꾸기 - 예제3 *</title>
+<script>
+	function me(btn){
+		btn.style.color=btn.value;		
+		btn.style.backgroundColor="yellow";
+		btn.style.borderStyle="dotted";
+	}
+</script></head>
+
+<body>
+<form >
+	<input type="button"  value="red"     onclick="me(this)">
+	<input type="button"  value="green"   onclick="me(this)">
+	<input type="button"  value="blue"    onclick="me(this)">
+</form>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>* this키워드를 이용해서 제목 색상 바꾸기 - 예제2 *</title>
+<script>
+	function me(btn, val){
+		btn.style.color=val;		
+	}
+</script></head>
+
+<body>
+<form >
+	<input type="button"  value="red"     onclick="me(this,'red')">
+	<input type="button"  value="green"   onclick="me(this,'green')">
+	<input type="button"  value="blue"    onclick="me(this,'blue')">
+</form>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>* this키워드를 이용해서 제목 색상 바꾸기 - 예제1 *</title>
+<script>
+	function me1(btn){
+		btn.style.color="red";		
+	}
+	function me2(btn){
+		btn.style.color="green";		
+	}
+	function me3(btn){
+		btn.style.color="blue";		
+	}
+</script></head>
+
+<body>
+<form >
+	<input type="button"  value="red"     onclick="me1(this)">
+	<input type="button"  value="green"   onclick="me2(this)">
+	<input type="button"  value="blue"    onclick="me3(this)">
+</form>
+</body>
+</html> -->

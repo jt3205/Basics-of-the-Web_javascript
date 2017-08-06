@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>**배경색 바꾸기**</title>
+	<script type="text/javascript">
+		function me1() {
+			//document.f.a.value="5번버튼";
+			document.getElementById('a').value="5번버튼";
+		}
+		function me2() {
+			//document.f.b.style.backgroundColor="green";
+			document.getElementById('b').style.backgroundColor="green";
+		}
+		function me3() {
+			//document.f.c.style.color="blue";
+			document.getElementById('c').style.color="blue";
+		}
+	</script>
+</head>
+<body>
+<!-- <form name="f"> -->
+	<input type="button"  value="1번버튼"  name="a"  id="a"  onclick="me1()">
+	<input type="button"  value="2번버튼"  name="b"  id="b"  class="c1" onclick="me2()">
+	<input type="button"  value="3번버튼"  name="c"  id="c"  class="c2"  onclick="me3()">
+<!-- </form> -->	
+</body>
+</html>

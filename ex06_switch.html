@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var data=9.5;
+
+		//switch(식)에서 식의 결과값으로 모든 타입이 가능하다
+		switch(data)
+		{
+			case 3.0: document.write(data);	break;
+			case 4.5: document.write(data);	break;
+			case 5.0: document.write(data);	break;
+			default: document.write("찾는 값이 없음");	
+		}
+		document.write("<br><br>");
+
+		//값의 자리에 비교연산자,논리연산자를 사용할수 있다
+		switch(true)
+		{
+			case data>10.0: document.write("good");		break;
+			case data>5.0: document.write("average");	break;
+			case data>0.0: document.write("bad");		break;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

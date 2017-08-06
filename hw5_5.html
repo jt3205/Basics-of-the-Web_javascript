@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function show(){
+		var year = document.getElementById("years").value;
+		var month = document.getElementById("months").value.toString();
+		alert(year+","+month);
+	}
+	</script>
+</head>
+<body>
+	<select name="years" id="years">
+		<option value="2000">2000</option>
+		<option value="2001">2001</option>
+		<option value="2002">2002</option>
+		<option value="2003">2003</option>
+		<option value="2004">2004</option>
+		<option value="2005">2005</option>
+	</select>년 
+	<select name="months" id="months">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select>월
+	<input type="button" id="show" value="보기" onclick="show()">
+</body>
+</html>

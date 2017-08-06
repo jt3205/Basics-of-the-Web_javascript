@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function validateEmail(){
+	// ID는 4~8자 사이이고 문자 다음에 어떤 문자가 와도 되고
+	// 반드시 @ 와  . 이 들어가야 한다
+
+	var  objEmail=document.getElementById("email");
+	var objRegex=new RegExp("^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$");
+
+	if(!objRegex.test(objEmail.value)){
+		alert("올바른 주소가 아닙니다");
+		objEmail.value="";
+		objEmail.focus();
+		return false;
+	}else{
+		alert("올바른 주소 입니다");
+	}	
+	return true;
+}
+</script></head>
+
+<body>
+<span>이메일 확인</span>
+	<input type="text"  name="email"  id="email">
+	<input type="button"  value="실행하기"  onclick="validateEmail()">
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function ex1(){
+			var s="var num=10"; 
+			eval(s);
+			alert(num);
+		}
+		function ex2(){
+			var s="var num=5+4"; 
+			eval(s);
+			alert(num);
+		}
+		function ex3(){
+			var s=eval("({'a':1, 'b':2, 'c':3})"); 
+			alert(s.c);
+		}
+	</script>
+</head>
+<body>
+<form name="frm">
+	<input type="button" onclick="ex1()" value="연습1">&nbsp;&nbsp;
+	<input type="button" onclick="ex2()" value="연습2">&nbsp;&nbsp;
+	<input type="button" onclick="ex3()" value="연습3">&nbsp;&nbsp;
+</form>	
+</body>
+</html>
+<!--  
+     eval("문자열") 함수
+      : 문자열을 자바스크립트 코드로 실행하는 함수로 수치화 시켜주거나 스크립트를 실행
+   
+     ※ 문자열로된 수식을 자바스크립트의 수식으로 변환
+    사용예1) "var num=2+5"        ->  var num=2+5 이라는  문자열  
+    사용예2) eval('var num=2+5')  ->  var num=2+5 이라는 수식으로 인식 
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		input{background-color:gray; color:white; }
+	</style>
+	<script type="text/javascript">
+		function me1(f){
+			f.style.backgroundColor=f.value;
+		}
+		function me2(f) {
+			f.style.backgroundColor="gray";
+		}
+	</script>
+</head>
+<body>
+	<script>
+		arr=new Array("red","orange","yellow","blue","green");
+		for(n=0; n<5; n++)
+		{
+			str="<input type='text' value='" + arr[n] 
+			       + "' onfocus='me1(this)' onblur='me2(this)'>"
+			document.write(str);
+		}
+	</script>
+</body>
+</html>
+<!-- # 배열
+	문법)
+	1. 첫번째 선언방법
+	배열변수명=new Array();
+	배열변수명[인덱스]=값;
+	
+	2. 두번째 선언방법
+	배열변수명=[값,값,값, ...];
+	
+	3. 세번째 선언방법
+	배열변수명=new Array( 값, 값, 값, ... );
+-->

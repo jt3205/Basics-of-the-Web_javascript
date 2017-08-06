@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>보이기/숨기기</title>
+	<script type="text/javascript">
+		function show() {
+			img1.style.visibility="visible";
+		}
+		function hide() {
+			img1.style.visibility="hidden";	
+		}
+	</script>
+</head>
+<body onload="hide()">
+	<form>
+		<input type="button" value="보이기" onclick="show()">
+		<input type="button" value="숨기기" onclick="hide()">
+	</form><br><br><br>
+	<img src="resource/house.gif"  id="img1">
+</body>
+</html>

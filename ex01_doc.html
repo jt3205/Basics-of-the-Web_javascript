@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트(문법-1)</title>
+	<script type="text/javascript">
+		//ex1)
+/*		document.write("<h2>자바스크립트 연습하기</h2>");
+		document.write("<p style='color:red'>programming is fun</p>");
+
+		var a=10, b=3, c,d,e,f;
+		c=a+b;
+		d=a-b;
+		e=a*b;
+		f=a/b;
+		document.write("두수의 합:" + (a+b) + "<br>");
+		document.write("두수의 차:" + d + "<br>");
+		document.write("두수의 곱:" + e + "<br>");
+		document.write("두수의 몫:" + f + "<br><br>");*/
+
+		//ex2)
+/*		name =prompt("이름을 입력하시오","");
+		document.write("나의 이름은 " + name +"이라고 합니다");*/
+
+		//ex3)
+/*		var id="admin";  
+		var pw="1234";
+		if(id=="admin"  && pw=="1235")		
+			alert("로그인 성공");
+		else
+			alert("로그인 실패");*/
+
+	//문제) 점수를 입력받아서 60이상이면 "합격" 미만이면 "불합격"
+	//점수를 입력하시오 : 55(prompt)      --->  불합격 (alert)	
+
+/*	var score = prompt("점수를 입력하시오","");
+	if(score >= 60)	
+		alert("합격");
+	else
+		alert("불합격");*/
+
+	//-----------------------------------------------------------------
+//	document.write("<img src='C:/html5_web/jsWork/resource/house.gif'>");   //절대경로
+//	document.write("<img src='./resource/house.gif'>");                     //상대경로
+
+	for(i=1; i<=5; i++)
+	{
+		document.write("<img src='./resource/house.gif'>"); 
+	}
+	document.write("<br><br><br>");
+
+	var cnt=0;
+	while(cnt<10)
+	{
+		++cnt;
+		document.write(cnt + "&nbsp;&nbsp;&nbsp;");
+	}	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

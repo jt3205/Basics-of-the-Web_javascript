@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function plusMethod()
+		{
+			             // "10" --> 10로 변환
+			//frm.rs.value=Number(frm.a.value) + Number(frm.b.value);
+			frm.rs.value=parseInt(frm.a.value) + parseInt(frm.b.value);
+		}
+
+	</script>
+</head>
+<body>
+<form name="frm">
+A값 : <input type="text" size="7" name="a">&nbsp;&nbsp;
+B값 : <input type="text" size="7" name="b">&nbsp;&nbsp;
+결과 : <input type="text" size="7" name="rs">
+<input type="button" name="plus" value="더하기" onclick="plusMethod()">
+</form>        <!-- 이벤트처리:더하기버튼을 클릭하면 plusMethod()호출 -->
+</body>
+</html>

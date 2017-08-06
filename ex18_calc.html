@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function calc(op) {
+			var n1=parseInt(document.getElementById('n1').value);
+			var n2=parseInt(document.getElementById('n2').value);
+
+			if(isNaN(n1) || isNaN(n2)){       // Not a Number (숫자가 아닐경우)
+				// "숫자가 아니다"  --> alert창
+				// n1, n2삭제 /  n1에 포커스 이동
+				alert("숫자가 아니다");
+				document.getElementById('n1').value="";
+				document.getElementById('n2').value=""
+				document.getElementById('n1').focus();
+			}else{
+				//switch를 이용해서 + , - , * , / 처리
+				switch(op){
+					case 1 : document.getElementById('rs').value = n1 + n2;  break;
+					case 2 : document.getElementById('rs').value = n1 - n2;  break;
+					case 3 : document.getElementById('rs').value = n1 * n2;  break;
+					case 4 : document.getElementById('rs').value = n1 / n2;  break;
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+<form name="fm">
+	num1 : <input type="text"  id="n1"><br>
+	num2 : <input type="text"  id="n2"><br>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button"  value=" + "  onclick="calc(1)">
+	<input type="button"  value=" - "  onclick="calc(2)">
+	<input type="button"  value=" * "  onclick="calc(3)">
+	<input type="button"  value=" / "  onclick="calc(4)"><br>
+	결&nbsp;&nbsp;과 : <input type="text"  id="rs"><br>
+</form>	
+</body>
+</html>

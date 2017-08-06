@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>* 타이핑에 효과 주기*</title>
+<script>
+	str="힘내요,여러분!!,자바스크립트 교육중.... ";
+	n=1;
+	flag=true;
+	function print2()
+	{
+		if(flag)
+		{
+			document.f.t.value=str.substring(0,n++);
+		}else{
+			document.f.t.value=str.substring(0,n--);
+		}
+		if(n == (str.length + 1))
+			flag=false;
+		if(n == 1)
+		  	flag=true;		
+		setTimeout("print2()", 100);        // setTimeout("호출함수","주기");
+		                                    // 1/1000초
+	}
+</script></head>
+<body  onload="print2()">
+	<form name="f">
+		<input type="text"  name="t"  size="50px" >
+ 	</form>
+</body>
+</html>

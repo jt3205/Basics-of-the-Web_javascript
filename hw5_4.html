@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function change() {
+		var value = Number(document.getElementById("dropbox").value);
+		
+		switch (value) {
+			case 1:	document.body.style.background = 'red';		break;
+			case 2: document.body.style.background = 'yellow';	break;
+			case 3:	document.body.style.background = 'green';	break;
+		}
+	}
+</script>
+</head>
+
+<body onload="change()">
+<select onchange="change()" id="dropbox">
+	<option value="1">red</option>
+	<option value="2" selected="selected">yellow</option>
+	<option value="3">green</option>
+</select>	
+</body>
+</html>

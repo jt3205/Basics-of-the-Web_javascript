@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RegExp(정규표현식)</title>
+	<script type="text/javascript">
+		//아이디에 입력되는 전체 길이는 5-8자 이다.
+		//아이디는 숫자,영문자로만 사용할 수 있다.
+		//아이디 시작은 영문자로 시작한다.
+		//조건에 맞게 입력했으면 "성공" 아니면 "다시입력" 메세지를 띄운다.
+		function process() {
+			var id=document.getElementById("mid").value;
+			var patt=new RegExp("^[a-z][0-9a-z]{5,8}$");
+			if(patt.test(id)){
+				alert("성공");
+			}else{
+				alert("다시입력");
+				document.getElementById("mid").value="";
+				document.getElementById("mid").focus();
+			}
+		}
+	</script>
+</head>
+<body>
+	<label>아이디</label>
+	<input type="text" name="mid" id="mid">	
+	<input type="button" value="commit" onclick="process()">	
+</body>
+</html>

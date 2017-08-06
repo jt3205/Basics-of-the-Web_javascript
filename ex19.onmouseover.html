@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function over() {
+			document.images[0].src="./resource/pic2.gif";
+		}
+		function out() {
+			document.images[0].src="./resource/pic1.gif";	
+		}
+		function down() {
+			alert("  X좌표:" + event.x +"\n  Y좌표 : " + event.y);
+		}
+		document.onmousedown=down;      // 마우스를 클릭했을때  down()함수 호출
+	</script>
+</head>
+<body>
+	<img src="./resource/pic1.gif" onmouseover="over()" onmouseout="out()">
+</body>
+</html>
+<!-- # Document객체 
+	onmouseover : 마우스가 범위를 접근했을때
+	onmouseout  : 마우스가 범위를 빠져나왔을때
+	onmousedown : 마우스를 클릭(눌림)했을때
+-->

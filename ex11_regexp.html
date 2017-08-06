@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RegExp(정규표현식)</title>
+	<script type="text/javascript">
+		//조건을 맞게 데이터를 입력하면 "입사축하" 아니면 "다시 입력"메세지를 띄우세요.
+	    //조건 : 년도 4자리, 월이나 일은 1자리이거나 2자리
+	    function process() {
+	    	var date=document.getElementById('hire_date').value;
+	    	var patt=new RegExp("^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$");
+
+	    	if(patt.test(date))
+	    		alert("입사축하");
+	    	else
+	    		alert("다시입력");
+	    }
+
+	</script>
+</head>
+<body>
+<span>입사년월일</span>  <!--예시 : 2014-12-24-->
+<input type="text" name="hire_date" id="hire_date" /> 
+<input type="button" value="commit" onclick="process()" />	
+</body>
+</html>
